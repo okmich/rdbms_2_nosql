@@ -1,0 +1,52 @@
+//create the ufo mapping
+PUT http://localhost:9200/ufo
+{
+	"mappings" : {
+		"properties" : {
+			"datetime" : {"type": "date", "store": true, "format": "M/d/yyyy HH:mm"},
+			"city" : {"type":"keyword", "store": true},
+			"state" : {"type":"keyword", "store": true},
+			"country" : {"type":"keyword", "store": true},
+			"shape" : {"type":"keyword", "store": true},
+			"duration_in_sec" : {"type" : "integer","store": true},
+			"duration_in_hrs_mins" : {"type" : "text", "store" : false, "index":"false"},
+			"comments" : {"type":"text", "store": true, "index":"true", "analyzer" : "snowball"},
+			"date_posted" : {"type" : "date", "store" : true, "format":"M/d/yyyy", "ignore_malformed": "true"},
+			"location" : {"type" : "geo_point", "ignore_malformed" : true}
+		}
+	},
+	"settings" : {
+		"number_of_shards" : 2,
+		"number_of_replicas" : 1,
+		"index" : {
+			"analysis" : {
+				"analyzer" : {
+					"like_keyword_analyzer" : {
+						"type" : "custom",
+						"tokenizer" : "keyword",
+						"filters" :  ["lowercase"]
+					}
+				}
+			}
+		}
+	}
+}
+
+//index a document into the ufo index and sighting type
+{
+	"datetime" : "10/10/1996 22:30",
+	"city" : "monroe county",
+	"state" : "oh",
+	"country" : "us",
+	"shape" : "cylinder",
+	"duration_in_sec" : 60,
+	"duration_in_hrs_mins" : "1 minute",
+	"comments" : "Looked like it went through the hillside",
+	"date_posted" : "7/8/2004",
+	"latitude" : 39.4402778,
+	"longitude" : -84.3622222
+}
+
+//write a scala application that will convert the complete.csv file to a json file for bulk import
+
+curl -XPOST 'localhost:9200/_bulk?pretty' -H "Content-Type: application/json" --data-binary @complete.es.json

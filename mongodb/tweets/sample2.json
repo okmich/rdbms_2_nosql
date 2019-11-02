@@ -1,0 +1,287 @@
+{
+  "filter_level": "low",
+  "quote_count": 0,
+  "retweeted": false,
+  "in_reply_to_screen_name": null,
+  "truncated": false,
+  "lang": "pt",
+  "in_reply_to_status_id_str": null,
+  "id": 1127145626964250624,
+  "in_reply_to_user_id_str": null,
+  "timestamp_ms": "1557567433478",
+  "in_reply_to_status_id": null,
+  "created_at": "Sat May 11 09:37:13 +0000 2019",
+  "favorite_count": 0,
+  "place": null,
+  "coordinates": null,
+  "text": "RT @centraldepp: 📸| Johnny Depp e Alice Cooper durante o show dos Hollywood Vampires que aconteceu essa madrugada (11/05).\n#JohnnyDepp #Hol…",
+  "contributors": null,
+  "retweeted_status": {
+    "filter_level": "low",
+    "quote_count": 0,
+    "retweeted": false,
+    "in_reply_to_screen_name": null,
+    "possibly_sensitive": false,
+    "truncated": true,
+    "lang": "pt",
+    "in_reply_to_status_id_str": null,
+    "id": 1127143158326886406,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_status_id": null,
+    "created_at": "Sat May 11 09:27:24 +0000 2019",
+    "favorite_count": 2,
+    "display_text_range": [
+      0,
+      140
+    ],
+    "place": null,
+    "coordinates": null,
+    "text": "📸| Johnny Depp e Alice Cooper durante o show dos Hollywood Vampires que aconteceu essa madrugada (11/05).… https://t.co/eewOnSq4cZ",
+    "contributors": null,
+    "geo": null,
+    "reply_count": 0,
+    "extended_tweet": {
+      "extended_entities": {
+        "media": [
+          {
+            "sizes": {
+              "small": {
+                "w": 680,
+                "resize": "fit",
+                "h": 680
+              },
+              "thumb": {
+                "w": 150,
+                "resize": "crop",
+                "h": 150
+              },
+              "medium": {
+                "w": 1080,
+                "resize": "fit",
+                "h": 1080
+              },
+              "large": {
+                "w": 1080,
+                "resize": "fit",
+                "h": 1080
+              }
+            },
+            "id": 1127143150684909568,
+            "media_url_https": "https://pbs.twimg.com/media/D6RquUOWsAA5wd-.jpg",
+            "media_url": "http://pbs.twimg.com/media/D6RquUOWsAA5wd-.jpg",
+            "expanded_url": "https://twitter.com/centraldepp/status/1127143158326886406/photo/1",
+            "indices": [
+              137,
+              160
+            ],
+            "id_str": "1127143150684909568",
+            "type": "photo",
+            "display_url": "pic.twitter.com/91cMoErHNG",
+            "url": "https://t.co/91cMoErHNG"
+          }
+        ]
+      },
+      "display_text_range": [
+        0,
+        136
+      ],
+      "entities": {
+        "symbols": [],
+        "urls": [],
+        "hashtags": [
+          {
+            "text": "JohnnyDepp",
+            "indices": [
+              106,
+              117
+            ]
+          },
+          {
+            "text": "HollywoodVampires",
+            "indices": [
+              118,
+              136
+            ]
+          }
+        ],
+        "media": [
+          {
+            "sizes": {
+              "small": {
+                "w": 680,
+                "resize": "fit",
+                "h": 680
+              },
+              "thumb": {
+                "w": 150,
+                "resize": "crop",
+                "h": 150
+              },
+              "medium": {
+                "w": 1080,
+                "resize": "fit",
+                "h": 1080
+              },
+              "large": {
+                "w": 1080,
+                "resize": "fit",
+                "h": 1080
+              }
+            },
+            "id": 1127143150684909568,
+            "media_url_https": "https://pbs.twimg.com/media/D6RquUOWsAA5wd-.jpg",
+            "media_url": "http://pbs.twimg.com/media/D6RquUOWsAA5wd-.jpg",
+            "expanded_url": "https://twitter.com/centraldepp/status/1127143158326886406/photo/1",
+            "indices": [
+              137,
+              160
+            ],
+            "id_str": "1127143150684909568",
+            "type": "photo",
+            "display_url": "pic.twitter.com/91cMoErHNG",
+            "url": "https://t.co/91cMoErHNG"
+          }
+        ],
+        "user_mentions": []
+      },
+      "full_text": "📸| Johnny Depp e Alice Cooper durante o show dos Hollywood Vampires que aconteceu essa madrugada (11/05).\n#JohnnyDepp #HollywoodVampires https://t.co/91cMoErHNG"
+    },
+    "entities": {
+      "symbols": [],
+      "urls": [
+        {
+          "expanded_url": "https://twitter.com/i/web/status/1127143158326886406",
+          "indices": [
+            107,
+            130
+          ],
+          "display_url": "twitter.com/i/web/status/1…",
+          "url": "https://t.co/eewOnSq4cZ"
+        }
+      ],
+      "hashtags": [],
+      "user_mentions": []
+    },
+    "is_quote_status": false,
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+    "favorited": false,
+    "in_reply_to_user_id": null,
+    "retweet_count": 2,
+    "id_str": "1127143158326886406",
+    "user": {
+      "location": "Brasil 🇧🇷",
+      "default_profile": false,
+      "profile_background_tile": false,
+      "statuses_count": 7330,
+      "lang": "pt",
+      "profile_link_color": "91D2FA",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/1010961483868659712/1552898348",
+      "id": 1010961483868659712,
+      "following": null,
+      "protected": false,
+      "favourites_count": 15058,
+      "profile_text_color": "000000",
+      "verified": false,
+      "description": "Central de informações sobre um dos maiores astros do mundo. Atualizações diárias da vida profissional e pessoal de Johnny Depp no Brasil.",
+      "contributors_enabled": false,
+      "profile_sidebar_border_color": "000000",
+      "name": "Central Johnny Depp",
+      "profile_background_color": "000000",
+      "created_at": "Sun Jun 24 19:02:55 +0000 2018",
+      "default_profile_image": false,
+      "followers_count": 5624,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1107562060450271232/89kO6Yax_normal.jpg",
+      "geo_enabled": true,
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+      "follow_request_sent": null,
+      "url": "https://www.instagram.com/centraldepp/",
+      "utc_offset": null,
+      "time_zone": null,
+      "translator_type": "none",
+      "notifications": null,
+      "profile_use_background_image": false,
+      "friends_count": 999,
+      "profile_sidebar_fill_color": "000000",
+      "screen_name": "centraldepp",
+      "id_str": "1010961483868659712",
+      "profile_image_url": "http://pbs.twimg.com/profile_images/1107562060450271232/89kO6Yax_normal.jpg",
+      "listed_count": 7,
+      "is_translator": false
+    }
+  },
+  "geo": null,
+  "reply_count": 0,
+  "entities": {
+    "symbols": [],
+    "urls": [],
+    "hashtags": [
+      {
+        "text": "JohnnyDepp",
+        "indices": [
+          123,
+          134
+        ]
+      }
+    ],
+    "user_mentions": [
+      {
+        "id": 1010961483868659712,
+        "name": "Central Johnny Depp",
+        "indices": [
+          3,
+          15
+        ],
+        "screen_name": "centraldepp",
+        "id_str": "1010961483868659712"
+      }
+    ]
+  },
+  "is_quote_status": false,
+  "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+  "favorited": false,
+  "in_reply_to_user_id": null,
+  "retweet_count": 0,
+  "id_str": "1127145626964250624",
+  "user": {
+    "location": "Romania",
+    "default_profile": false,
+    "profile_background_tile": false,
+    "statuses_count": 17462,
+    "lang": "en",
+    "profile_link_color": "89C9FA",
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/3167063236/1553885513",
+    "id": 3167063236,
+    "following": null,
+    "protected": false,
+    "favourites_count": 12809,
+    "profile_text_color": "000000",
+    "verified": false,
+    "description": "I support Johnny Depp because he is a sweet, kind, down to earth person with a big heart and who loves and respects his fans.\nhttps://t.co/GVqyCyrVzq",
+    "contributors_enabled": false,
+    "profile_sidebar_border_color": "000000",
+    "name": "Andreea #DeppHead of Romania",
+    "profile_background_color": "000000",
+    "created_at": "Tue Apr 14 20:07:25 +0000 2015",
+    "default_profile_image": false,
+    "followers_count": 347,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/1069615191862796288/7VV56CFw_normal.jpg",
+    "geo_enabled": false,
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+    "follow_request_sent": null,
+    "url": null,
+    "utc_offset": null,
+    "time_zone": null,
+    "translator_type": "none",
+    "notifications": null,
+    "profile_use_background_image": false,
+    "friends_count": 99,
+    "profile_sidebar_fill_color": "000000",
+    "screen_name": "bacacov",
+    "id_str": "3167063236",
+    "profile_image_url": "http://pbs.twimg.com/profile_images/1069615191862796288/7VV56CFw_normal.jpg",
+    "listed_count": 1,
+    "is_translator": false
+  }
+}

@@ -1,0 +1,5 @@
+/redis/redis-sample-client/target/
+/mongodb/mysql2mongodb/target/
+**/target/
+/**/target/
+dependency-reduced-pom.xml

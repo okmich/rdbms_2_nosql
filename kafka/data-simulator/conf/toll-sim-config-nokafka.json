@@ -1,0 +1,14 @@
+{
+  "workflows": [
+    {
+      "workflowName": "toll-example",
+      "workflowFilename": "tollWorkflow.json",
+      "instances": 5
+    }
+  ],
+  "producers": [
+    {
+      "type": "logger"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "eventFrequency": 1000,
+  "varyEventFrequency": true,
+  "repeatWorkflow": true,
+  "timeBetweenRepeat": 4000,
+  "varyRepeatFrequency": true,
+  "stepRunMode": "random-pick-one",
+  "steps": [
+    {
+      "config": [
+        {
+          "timestamp": "nowTimestamp()",
+          "sessionId": "270705367",
+          "sessionTag": "2019 UEFA Champions League Final",
+          "category": "Sports",
+          "userId": "alphaNumeric(12)",
+          "gender": "random('Female','Female', 'NA')",
+          "region": "random('North-Central', 'North-Earth', 'North-West', 'South-West', 'South-East', 'South-South')",
+          "responses": [
+            {
+              "question": "Who do you want to win the 2019 UEFA Champions league final",
+              "option": "random('Liverpool FC','Totteham Hotspurs FC')"
+            },
+            {
+              "question": "And you are a fan of a club in ? ",
+              "option": "random('Belgium','England','France','Germany','Holland','Nigeria','South Africa','Spain','Turkey','Wales','Others')"
+            },
+            {
+              "question": "Your favourite sports show in the country is?",
+              "option": "random('FATG','Wazobia Sports', 'Heineken Talks Football', 'Minaj Sports Blitz', 'Others')"
+            }
+          ]
+        }
+      ],
+      "duration": 0
+    },
+    {
+      "config": [
+        {
+          "timestamp": "nowTimestamp()",
+          "sessionId": "270705368",
+          "sessionTag": "Best Movie of the Year so far",
+          "category": "Entertainment",
+          "userId": "alphaNumeric(12)",
+          "gender": "random('Female','Female', 'NA')",
+          "region": "random('North-Central', 'North-Earth', 'North-West', 'South-West', 'South-East', 'South-South')",
+          "responses": [
+            {
+              "question": "Who do you want to win the 2019 UEFA Champions league final",
+              "option": "random('Avengers: Endgame','Transit', 'Under the Silver Lake', 'Climax', 'Her Smell', 'The Beach Bum', 'Hagazussa', 'Apollo 11', 'Diane', 'Shadow', 'Ash Is Purest White', 'High Life', 'Greta')"
+            }
+          ]
+        }
+      ],
+      "duration": 0
+    }
+  ]
+}

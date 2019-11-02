@@ -1,0 +1,23 @@
+{
+  "eventFrequency": 800,
+  "varyEventFrequency": true,
+  "repeatWorkflow": true,
+  "timeBetweenRepeat": 2000,
+  "varyRepeatFrequency": true,
+  "stepRunMode": "sequential",
+  "steps": [
+    {
+      "config": [
+        {
+          "id" : "uuid()",
+          "vehicle_type" : "random('BICYCLE', 'MOTORCYCLE', 'TRICYCLE', 'LIGHTVEHICLE', 'MEDIUMVEHICLE', 'HEAVYVEHICLE', 'VHEAVYVEHICLE')",
+          "toll" : "random('toll001', 'toll002', 'toll003', 'toll004', 'toll005', 'toll006', 'toll007', 'toll008', 'toll009', 'toll010', 'toll011', 'toll012')",
+          "ts": "nowTimestamp()",
+          "payment_type" : "random('CASH', 'CARD', 'PREPAID')",
+          "card_no" : "alphaNumeric(16)"
+        }
+      ],
+      "duration": 0
+    }
+  ]
+}

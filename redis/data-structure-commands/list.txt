@@ -1,0 +1,37 @@
+ECHO "Lets create some string data"
+LPUSH demo.ml.ratings "1::1193::5::978300760" "1::661::3::978302109"
+RPUSH demo.ml.ratings "1::914::3::978301968" "1::3408::4::978300275"
+
+ECHO "See all the content of the list"
+LRANGE demo.ml.ratings 0 -1
+
+ECHO "Add more data from the tail end of the list"
+RPUSH demo.ml.ratings "1::2355::5::978824291" "1::1197::3::978302268"
+
+ECHO "return the element at the index of the list. This happens from the head"
+LINDEX demo.ml.ratings 0
+LINDEX demo.ml.ratings 1
+
+ECHO "return and remove an item from the head and tail respectively."
+LPOP demo.ml.ratings
+RPOP demo.ml.ratings 
+
+ECHO "Add more data from the head end of the list"
+LPUSH demo.ml.ratings "1::1287::5::978302039" "1::1287::5::978302039" "1::2804::5::978300719" "1::594::4::978302268"
+
+ECHO "Add a number of duplications from the head end of the list"
+LPUSH demo.ml.ratings "1::919::4::978301368" "1::919::4::978301368" "1::919::4::978301368" "1::919::4::978301368"
+
+ECHO "Use LTRIM to cap the list. This time, the purpose is to remove the duplication I entered above"
+LTRIM demo.ml.ratings 3 -1
+
+ECHO "Use LTRIM to cap the list to just one item" 
+LTRIM demo.ml.ratings 0 0
+
+ECHO "use blocking pop to remove an item from the list with 0 timeout"
+ECHO "the first command should work while the second will block indefinitely"
+BLPOP demo.ml.ratings 0
+BLPOP demo.ml.ratings 0
+
+
+ECHO "checkout out other commands for lists from the official command referent https://redis.io/commands#list"

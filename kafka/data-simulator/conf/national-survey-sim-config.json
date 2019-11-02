@@ -1,0 +1,22 @@
+{
+  "workflows": [
+    {
+      "workflowName": "national-survey-example",
+      "workflowFilename": "nationalSurveyWorkflow.json",
+      "instances": 5
+    }
+  ],
+  "producers": [
+    {
+      "type": "logger"
+    },
+    {
+      "type": "kafka",
+      "broker.server": "127.0.0.1",
+      "broker.port": 9092,
+      "topic": "survey-raw-response-topic",
+      "flatten": false,
+      "sync": false
+    }
+  ]
+}

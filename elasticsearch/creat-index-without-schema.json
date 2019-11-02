@@ -1,0 +1,247 @@
+http://localhost:9200/review/1
+
+  {
+    "id": 0,
+    "country": "Italy",
+    "description": "Aromas include tropical fruit, broom, brimstone and dried herb. The palate isn't overly expressive, offering unripened apple, citrus and dried sage alongside brisk acidity.",
+    "designation": "Vulkà Bianco",
+    "points": 87,
+    "price": 0.0,
+    "province": "Sicily & Sardinia",
+    "region_1": "Etna",
+    "region_2": "",
+    "taster_name": "Kerin O’Keefe",
+    "taster_twitter_handle": "@kerinokeefe",
+    "title": "Nicosia 2013 Vulkà Bianco  (Etna)",
+    "variety": "White Blend",
+    "winery": "Nicosia",
+    "active" : true
+  }
+
+http://localhost:9200/review/2
+  {
+    "id": 1,
+    "country": "Portugal",
+    "description": "This is ripe and fruity, a wine that is smooth while still structured. Firm tannins are filled out with juicy red berry fruits and freshened with acidity. It's  already drinkable, although it will certainly be better from 2016.",
+    "designation": "Avidagos",
+    "points": 87,
+    "price": 15.12,
+    "province": "Douro",
+    "region_1": "",
+    "region_2": "",
+    "taster_name": "Roger Voss",
+    "taster_twitter_handle": "@vossroger",
+    "title": "Quinta dos Avidagos 2011 Avidagos Red (Douro)",
+    "variety": "Portuguese Red",
+    "winery": "Quinta dos Avidagos",
+    "active" : true
+  }
+
+http://localhost:9200/review/3
+  {
+    "id": 2,
+    "country": "US",
+    "description": "Tart and snappy, the flavors of lime flesh and rind dominate. Some green pineapple pokes through, with crisp acidity underscoring the flavors. The wine was all stainless-steel fermented.",
+    "designation": "",
+    "points": 87,
+    "price": 14.08,
+    "province": "Oregon",
+    "region_1": "Willamette Valley",
+    "region_2": "Willamette Valley",
+    "taster_name": "Paul Gregutt",
+    "taster_twitter_handle": "@paulgwine",
+    "title": "Rainstorm 2013 Pinot Gris (Willamette Valley)",
+    "variety": "Pinot Gris",
+    "winery": "Rainstorm",
+    "active" : true
+  }
+
+http://localhost:9200/review/4
+  {
+    "id": 3,
+    "country": "US",
+    "description": "Pineapple rind, lemon pith and orange blossom start off the aromas. The palate is a bit more opulent, with notes of honey-drizzled guava and mango giving way to a slightly astringent, semidry finish.",
+    "designation": "Reserve Late Harvest",
+    "points": 87,
+    "price": 13.90,
+    "province": "Michigan",
+    "region_1": "Lake Michigan Shore",
+    "region_2": "",
+    "taster_name": "Alexander Peartree",
+    "taster_twitter_handle": "",
+    "title": "St. Julian 2013 Reserve Late Harvest Riesling (Lake Michigan Shore)",
+    "variety": "Riesling",
+    "winery": "St. Julian",
+    "active" : true
+  }
+
+http://localhost:9200/review/5
+  {
+    "id": 4,
+    "country": "US",
+    "description": "Much like the regular bottling from 2012, this comes across as rather rough and tannic, with rustic, earthy, herbal characteristics. Nonetheless, if you think of it as a pleasantly unfussy country wine, it's a good companion to a hearty winter stew.",
+    "designation": "Vintner's Reserve Wild Child Block",
+    "points": 87,
+    "price": 65.50,
+    "province": "Oregon",
+    "region_1": "Willamette Valley",
+    "region_2": "Willamette Valley",
+    "taster_name": "Paul Gregutt",
+    "taster_twitter_handle": "@paulgwine",
+    "title": "Sweet Cheeks 2012 Vintner's Reserve Wild Child Block Pinot Noir (Willamette Valley)",
+    "variety": "Pinot Noir",
+    "winery": "Sweet Cheeks",
+    "active" : true
+  }
+
+http://localhost:9200/review/6
+  {
+    "id": 5,
+    "country": "Spain",
+    "description": "Blackberry and raspberry aromas show a typical Navarran whiff of green herbs and, in this case, horseradish. In the mouth, this is fairly full bodied, with tomatoey acidity. Spicy, herbal flavors complement dark plum fruit, while the finish is fresh but grabby.",
+    "designation": "Ars In Vitro",
+    "points": 87,
+    "price": 15.99,
+    "province": "Northern Spain",
+    "region_1": "Navarra",
+    "region_2": "",
+    "taster_name": "Michael Schachner",
+    "taster_twitter_handle": "@wineschach",
+    "title": "Tandem 2011 Ars In Vitro Tempranillo-Merlot (Navarra)",
+    "variety": "Tempranillo-Merlot",
+    "winery": "Tandem",
+    "active" : true
+  }
+
+http://localhost:9200/review/7
+  {
+    "id": 6,
+    "country": "Italy",
+    "description": "Here's a bright, informal red that opens with aromas of candied berry, white pepper and savory herb that carry over to the palate. It's balanced with fresh acidity and soft tannins.",
+    "designation": "Belsito",
+    "points": 87,
+    "price": 16.39,
+    "province": "Sicily & Sardinia",
+    "region_1": "Vittoria",
+    "region_2": "",
+    "taster_name": "Kerin O’Keefe",
+    "taster_twitter_handle": "@kerinokeefe",
+    "title": "Terre di Giurfo 2013 Belsito Frappato (Vittoria)",
+    "variety": "Frappato",
+    "winery": "Terre di Giurfo",
+    "active" : true
+  }
+
+http://localhost:9200/review/8
+  {
+    "id": 7,
+    "country": "France",
+    "description": "This dry and restrained wine offers spice in profusion. Balanced with acidity and a firm texture, it's very much for food.",
+    "designation": "",
+    "points": 87,
+    "price": 24.85,
+    "province": "Alsace",
+    "region_1": "Alsace",
+    "region_2": "",
+    "taster_name": "Roger Voss",
+    "taster_twitter_handle": "@vossroger",
+    "title": "Trimbach 2012 Gewurztraminer (Alsace)",
+    "variety": "Gewürztraminer",
+    "winery": "Trimbach",
+    "active" : true
+  }
+
+http://localhost:9200/review/9
+  {
+    "id": 8,
+    "country": "Germany",
+    "description": "Savory dried thyme notes accent sunnier flavors of preserved peach in this brisk, off-dry wine. It's fruity and fresh, with an elegant, sprightly footprint.",
+    "designation": "Shine",
+    "points": 87,
+    "price": 12.99,
+    "province": "Rheinhessen",
+    "region_1": "",
+    "region_2": "",
+    "taster_name": "Anna Lee C. Iijima",
+    "taster_twitter_handle": "",
+    "title": "Heinz Eifel 2013 Shine Gewürztraminer (Rheinhessen)",
+    "variety": "Gewürztraminer",
+    "winery": "Heinz Eifel",
+    "active" : true
+  }
+
+http://localhost:9200/review/10
+  {
+    "id": 9,
+    "country": "France",
+    "description": "This has great depth of flavor with its fresh apple and pear fruits and touch of spice. It's off dry while balanced with acidity and a crisp texture. Drink now.",
+    "designation": "Les Natures",
+    "points": 87,
+    "price": 27.50,
+    "province": "Alsace",
+    "region_1": "Alsace",
+    "region_2": "",
+    "taster_name": "Roger Voss",
+    "taster_twitter_handle": "@vossroger",
+    "title": "Jean-Baptiste Adam 2012 Les Natures Pinot Gris (Alsace)",
+    "variety": "Pinot Gris",
+    "winery": "Jean-Baptiste Adam",
+    "active" : true
+  }
+
+http://localhost:9200/review/11
+  {
+    "id": 10,
+    "country": "US",
+    "description": "Soft, supple plum envelopes an oaky structure in this Cabernet, supported by 15% Merlot. Coffee and chocolate complete the picture, finishing strong at the end, resulting in a value-priced wine of attractive flavor and immediate accessibility.",
+    "designation": "Mountain Cuvée",
+    "points": 87,
+    "price": 19.99,
+    "province": "California",
+    "region_1": "Napa Valley",
+    "region_2": "Napa",
+    "taster_name": "Virginie Boone",
+    "taster_twitter_handle": "@vboone",
+    "title": "Kirkland Signature 2011 Mountain Cuvée Cabernet Sauvignon (Napa Valley)",
+    "variety": "Cabernet Sauvignon",
+    "winery": "Kirkland Signature",
+    "active" : true
+  }
+
+http://localhost:9200/review/12
+  {
+    "id": 11,
+    "country": "France",
+    "description": "This is a dry wine, very spicy, with a tight, taut texture and strongly mineral character layered with citrus as well as pepper. It's a food wine with its almost crisp aftertaste.",
+    "designation": "",
+    "points": 87,
+    "price": 30.00,
+    "province": "Alsace",
+    "region_1": "Alsace",
+    "region_2": "",
+    "taster_name": "Roger Voss",
+    "taster_twitter_handle": "@vossroger",
+    "title": "Leon Beyer 2012 Gewurztraminer (Alsace)",
+    "variety": "Gewürztraminer",
+    "winery": "Leon Beyer",
+    "active" : true
+  }
+
+http://localhost:9200/review/13
+  {
+    "id": 12,
+    "country": "US",
+    "description": "Slightly reduced, this wine offers a chalky, tannic backbone to an otherwise juicy explosion of rich black cherry, the whole accented throughout by firm oak and cigar box.",
+    "designation": "",
+    "points": 87,
+    "price": 34.00,
+    "province": "California",
+    "region_1": "Alexander Valley",
+    "region_2": "Sonoma",
+    "taster_name": "Virginie Boone",
+    "taster_twitter_handle": "@vboone",
+    "title": "Louis M. Martini 2012 Cabernet Sauvignon (Alexander Valley)",
+    "variety": "Cabernet Sauvignon",
+    "winery": "Louis M. Martini",
+    "active" : true
+  }

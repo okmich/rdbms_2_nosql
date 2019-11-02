@@ -1,0 +1,69 @@
+//the general structure of aggregation query is 
+{
+	"query": { … },
+	"aggregations" : { … }
+}
+
+//we already seen query in action, so lets focus on aggregations
+//the value of aggregations should follow this format
+{
+	"<aggregation_name>" : {
+        "<aggregation_type>" : {
+            <aggregation_body>
+        }
+        [,"aggregations" : { [<sub_aggregation>]+ } ]?
+    },
+	"<aggregation_name_2>" : {
+        "<aggregation_type>" : {
+            <aggregation_body>
+        }
+        [,"aggregations" : { [<sub_aggregation_2>]+ } ]?
+    }
+}
+
+//////////////////////////
+///// BUCKETING
+///// METRICS
+///// MATRIX
+///// PIPELINE
+//////////////////////////
+
+//BUCKETING EXAMPLE
+{
+	"query" : {
+		"match_all" : {}
+    },
+    "size" : 0,
+    "aggregations" : {
+        "genre_hist_counting" : {
+            "terms" : { 
+                "field" : "genres",
+                "size"  : 15
+            } 
+        }
+    }
+}
+
+
+//METRIC EXAMPLE
+{
+	"query" : {
+		"match_all" : {}
+    },
+    "size" : 0,
+    "aggregations" : {
+        "genre_hist_counting" : {
+            "terms" : { 
+                "field" : "genres",
+                "size"  : 20
+            }, 
+            "aggregations" : {
+                "statistics" : {
+                    "stats" : { 
+                        "field" : "rating"
+                    } 
+                }
+            }
+        }
+    }
+}

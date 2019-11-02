@@ -1,0 +1,41 @@
+ECHO "Lets create some string data"
+
+SET demo.webapp.visitor_count 2
+SET demo.ml.movie.2  "2::Jumanji (1995)::Adventure|Children's|Fantasy"
+SET demo.app.usertoken:abc@yahoo.co.za RBPouKfAKzSUJdPihrJJAMkRCGcn5P5MICuzLZ2rPAldqeQa4U EX 21600 NX
+
+ECHO "lets now get our results back"
+
+GET demo.webapp.visitor_count
+GET demo.ml.movie.2
+GET demo.app.usertoken:abc@yahoo.co.za
+GET demo.app.usertoken:doesnotexist@yahoo.co.za
+
+## MSET MGET
+ECHO "they type of our key is "
+
+TYPE demo.webapp.visitor_count
+TYPE demo.ml.movie.2
+TYPE demo.app.usertoken:abc@yahoo.co.za
+
+ECHO "but the encoding will differ"
+
+OBJECT ENCODING demo.webapp.visitor_count
+OBJECT ENCODING demo.ml.movie.2
+OBJECT ENCODING demo.app.usertoken:abc@yahoo.co.za
+
+ECHO "they object encoding determines the permissible operation that can be performed."
+
+INCR demo.webapp.visitor_count   # we cannot do this to demo.app.usertoken:abc@yahoo.co.za for instance 
+DECR demo.webapp.visitor_count
+
+INCR demo.app.usertoken:abc@yahoo.co.za
+
+INCRBY demo.webapp.visitor_count 10
+INCRBY demo.ml.movie.2 2.1
+DECRBY demo.webapp.visitor_count 2
+
+ECHO "get the length of our user token"
+STRLEN demo.app.usertoken:abc@yahoo.co.za
+
+ECHO "checkout out other commands for string from the official command referent https://redis.io/commands#string"

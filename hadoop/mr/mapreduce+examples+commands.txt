@@ -1,0 +1,9 @@
+
+yarn jar mr-movielens-0.0.1-SNAPSHOT.jar com.okmich.hadoop.movielens.GenreCountingMain /user/hadoop/raw/movielens/latest/movies /user/hadoop/output/movielens/genrecounting
+
+
+yarn jar mr-movielens-0.0.1-SNAPSHOT.jar com.okmich.hadoop.movielens.MovieSummaryMain /user/hadoop/raw/movielens/latest/ratings /user/hadoop/output/movielens/ratings
+
+
+yarn jar mr-movielens-0.0.1-SNAPSHOT.jar com.okmich.hadoop.movielens.MovieSummaryWithTitleMain /user/hadoop/raw/movielens/latest/ratings /user/hadoop/raw/movielens/movies /user/hadoop/output/movielens/ratings_with_title
+

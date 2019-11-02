@@ -1,0 +1,22 @@
+{
+  "workflows": [
+    {
+      "workflowName": "road-toll-example",
+      "workflowFilename": "tollWorkflow.json",
+      "instances": 5
+    }
+  ],
+  "producers": [
+    {
+      "type": "logger"
+    },
+    {
+      "type": "kafka",
+      "broker.server": "127.0.0.1",
+      "broker.port": 9092,
+      "topic": "toll-raw-stream-topic",
+      "flatten": false,
+      "sync": false
+    }
+  ]
+}

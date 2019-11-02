@@ -1,0 +1,17 @@
+PUT /ml-users
+
+{
+	"mappings" : {
+		"properties" : {
+			"id" : {"type": "integer"},
+			"age_group" : {"type": "keyword"},
+			"gender" : {"type": "keyword"},
+			"occupation" : {"type" : "keyword"},
+			"zip_code" : {"type" : "keyword"}
+		}
+	},
+	"settings" : {
+		"number_of_shards" : 3,
+		"number_of_replicas" : 1
+	}
+}

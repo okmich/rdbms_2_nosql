@@ -1,0 +1,14 @@
+#
+# maria_dev user on HDP 2.6.5 does not have permissions to create tables on Hortonworks sandbox.
+# so make sure to work as hbase user
+
+sudo su hbase
+
+# open the hbase shell
+hbase shell
+
+#
+# to run the migration java application, add the following to the java -jar command 
+# -DHADOOP_USER_NAME=hbase
+#
+java -jar target\movielens-hbase-1.0-SNAPSHOT.jar -DHADOOP_USER_NAME=hbase  -tblname=movies

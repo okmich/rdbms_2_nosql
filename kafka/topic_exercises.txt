@@ -1,0 +1,43 @@
+export PATH=$PATH:/opt/confluent-5.3.0/bin/
+
+# see all the command options for managing topics from the command line
+kafka-topics --help
+
+# create a topic 
+kafka-topics --create --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1 --topic test-topic 
+
+# create a topic with more configurations
+kafka-topics --create --bootstrap-server localhost:9092 --partitions 1 \
+	--replication-factor 1 \
+	--topic configured-test-topic \
+	--config cleanup.policy=compact \
+	--config retention.bytes=-1 \
+	--config retention.ms=604800000 \
+	--config compression.type=snappy
+
+# list all topics available 
+kafka-topics --list --bootstrap-server localhost:9092 
+
+# show the properties of a topic
+kafka-topics --describe --bootstrap-server localhost:9092 --topic test-topic
+
+# alter a topic - to change number of partitions, replica assignment or configuration
+kafka-topics --alter --bootstrap-server localhost:9092 --partitions 2 --topic test-topic 
+
+# delete a topic
+kafka-topics --delete --bootstrap-server localhost:9092 --topic configured-test-topic
+
+
+# kafka console producer example
+kafka-console-producer --broker-list localhost:9092 --topic test-topic 
+
+
+# kafka console consumer
+kafka-console-consumer --bootstrap-server localhost:9092 --topic test-topic --property print.key=true --property key.separator='|'
+
+# kafka console consumer from the 0 offset
+kafka-console-consumer --bootstrap-server localhost:9092 --topic test-topic --property print.key=true --property key.separator='|' --from-beginning
+
+
+
+

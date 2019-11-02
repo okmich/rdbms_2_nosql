@@ -1,0 +1,7 @@
+# to generate an agent with number of plugins
+/opt/tick/telegraf/usr/bin/telegraf --input-filter redis:cpu:mem --output-filter influxdb config > redis-server-telegraf-config.conf
+
+# to run the telegraf agent
+/opt/tick/telegraf/usr/bin/telegraf --config redis-server-telegraf-config.conf 
+
+

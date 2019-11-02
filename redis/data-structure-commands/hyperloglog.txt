@@ -1,0 +1,11 @@
+ECHO "Lets create some string data"
+PFADD demo.ml.rating.users 1 1 3 4 12 3 4 6 3 5 7 65 5 33 2 213 3 7 4 
+
+ECHO "Introspecting our structure"
+TYPE demo.ml.rating.users 
+OBJECT ENCODING demo.ml.rating.users 
+
+ECHO "Count the number of items in our hyperloglog"
+PFCOUNT demo.ml.rating.users 
+
+ECHO "checkout out other commands for hyperloglog from the official command referent https://redis.io/commands#hyperloglog"

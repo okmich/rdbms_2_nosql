@@ -1,0 +1,19 @@
+PUT /ml-movies
+
+{
+	"mappings" : {
+		"dynamic" : false,
+		"properties" : {
+			"id" : {"type": "long", "store": true},
+			"title" : {"type" : "text", "store" : true, "index" : true, "analyzer" : "snowball", "copy_to" : "title_genres"},
+			"year" : {"type" : "short", "store" : true},
+			"genres" : {"type" : "keyword", "store": true, "copy_to" : "title_genres"},
+			"title_genres" : {"type" : "text", "index" : true, "store": false, "analyzer": "standard"}
+		}
+
+	},
+	"settings" : {
+		"number_of_shards" : 1,
+		"number_of_replicas" : 1
+	}
+}

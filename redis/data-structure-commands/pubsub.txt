@@ -1,0 +1,14 @@
+#
+# open two terms and have redis-cli open in both.
+#
+ECHO "THIS IS THE CLIENT SUBSCRIBER"
+SUBSCRIBE channel_test_1
+
+
+
+
+
+ECHO "in the second terminal with redis-cli"
+PUBLISH channel_test_1 "this is my hello world"
+
+ECHO "checkout out the commands for pubsub from the official command referent https://redis.io/commands#pubsub"

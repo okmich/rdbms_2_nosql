@@ -1,0 +1,38 @@
+ECHO "Lets create some string data"
+SADD demo.ml.genres Action Adventure Animation Children Comedy Crime Drama Fantasy 
+SADD demo.ml.genres War Western Horror Sci-Fi  Mystery Romance  Thriller Fantasy Documentary Film-Noir
+
+ECHO "Return the cardinality of the set"
+SCARD demo.ml.genres
+
+ECHO "Inspect the type and object encoding"
+TYPE demo.ml.genres
+OBJECT ENCODING demo.ml.genres
+
+ECHO "Return all members of the set. Be careful as this could contain a lot of records"
+SMEMBERS demo.ml.genres
+
+ECHO "Check if an item is a member of the set"
+SISMEMBER demo.ml.genres Action
+SISMEMBER demo.ml.genres Actions
+
+ECHO "randomly return x members of the set"
+SRANDMEMBER demo.ml.genres 2
+
+ECHO "Create a new set"
+SADD demo.ml.genres.viewed Documentary Adventure Thriller Comedy Drama Fantasy 
+
+
+ECHO "Find all items common to both sets. use SINTERSTORE to do the same but store the value in a new set"
+SINTER demo.ml.genres demo.ml.genres.viewed 
+
+ECHO "Find the difference between the first set and the rest. use SDIFFSTORE to do the same but store the value in a new set"
+SDIFF demo.ml.genres demo.ml.genres.viewed
+
+ECHO "Remove and return a value from this set."
+SPOP demo.ml.genres.viewed
+
+ECHO "Remove the item named from this set."
+SREM demo.ml.genres.viewed Drama
+
+ECHO "checkout out other commands for sets from the official command reference https://redis.io/commands#set"

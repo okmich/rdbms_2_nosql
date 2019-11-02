@@ -1,0 +1,22 @@
+PUT /ml-tags
+
+{
+	"mappings" : {
+		"dynamic" : false,  //false, true, strict
+		"properties" : {
+			"userId" : {"type": "long", "store": true},
+			"movieId" : {"type": "long", "store": true},
+			"title" : {"type" : "text", "store" : true, "index" : true, "analyzer" : "snowball", "copy_to" : "all"},
+			"year" : {"type" : "short", "store" : true},
+			"genres" : {"type" : "keyword", "store": true, "copy_to" : "all"},
+			"tag" : {"type" : "text", "store" : true, "index" : true, "analyzer" : "snowball", "copy_to" : "all"},
+			"ts" : {"type" : "date", "store": true, "format":"dd/MM/yyyy HH:mm"},
+			"all" : {"type" : "text", "index" : true, "store": false, "analyzer": "standard"}
+		}
+	},
+	"settings" : {
+		"number_of_shards" : 3,
+		"number_of_replicas" : 1
+	}
+}
+

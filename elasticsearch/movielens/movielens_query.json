@@ -1,0 +1,163 @@
+//general format for query DSL 
+{
+	"query": {},
+	"from": 0,
+	"size": 20, 
+	"sort" : [...],
+	"_source": [...],
+	"min_score" : ...,
+	...
+}
+
+//////////////////////////
+///// TERM QUERIES
+///// FULL TEXT QUERIES
+///// COMPOUND QUERIES
+///// AGGREGATE QUERIES
+//////////////////////////
+
+//term based query
+//for numbers, dates, and enums as the query strings are not analyzed
+//matching is done by exactness comparison
+{
+  "query": {
+    "term" : {
+      "genres" : "Action"
+    }
+  }
+}
+
+//matching more than one term at a time
+{
+  "query": {
+  	"terms" : {
+  		"genres" : ["Action", "Adventure"]
+  	}
+  }
+}
+
+//matching a range of values
+{
+  "query": {
+  	"range" : {
+  		"year" : {
+            "gte" : 1998,
+            "lte" : 2001
+        }
+  	}
+  }
+}
+
+//we also have exist, prefix, wildcard, regexp, etc.
+
+////////////////////////full-text query
+//match all
+{
+	"query": {
+		"match_all": {}
+	}
+}
+
+//match none
+{
+	"query": {
+		"match_none": {}
+	}
+}
+
+//match
+{
+	"query": {
+		"match": {
+			"title" : "awesome light"
+		}
+	}
+}
+
+//match_phrase
+{
+	"query": {
+		"match_phrase": {
+			"tag" : "super hero"
+		}
+	}
+}
+
+//multi match
+{
+	"query": {
+		"multi_match": {
+			"query" : "awesome light",
+			"fields" : ["genres", "tag", "title"]
+		}
+	}
+}
+
+//query_string
+//this is where you play by Lucene's rules and syntaxt
+{
+	"query": {
+		"query_string": {
+			"default_field" : "title",
+			"query" : "title:romance^2 +tag:lovely"
+		}
+	}
+}
+
+//Compound queries
+//these are queries that can contain other simple or compound queries
+//use them when you want near-precision search results with 
+//very specific search using complex rules
+
+//we will look at only the bool query which is quite popular
+{
+  "query": {
+    "bool": {
+      "must": [...],
+      "should": [...],
+      "must_not": [...],
+      "filter": [...]
+    }
+  }
+}
+// example
+{
+  "query": {
+    "bool": {
+      "must": [
+      	{
+      		"match_all": {}	
+      	}
+      ],
+      "should": [
+      	{
+      		"match_phrase": {
+      			"tag" : "super heroes"
+      		}	
+      	}
+      ],
+      "must_not": [
+      	{
+      		"match_none": {}	
+      	}
+      ],
+      "filter": [
+      	{
+      		"terms" : {
+      			"genres" : ["Action", "Adventure", "Sci-Fi", "Comedy"]
+      		}
+      	},
+      	{
+      		"range" : {
+      			"year" : {
+	      			"gte" : 1990,
+	      			"lte" : 2000
+	      		}
+      		}
+      	}
+      ]
+    }
+  }
+}
+
+// other compound query opertion include constant_score, function_score, and much more.

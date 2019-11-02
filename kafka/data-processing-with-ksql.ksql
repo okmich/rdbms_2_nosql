@@ -1,0 +1,50 @@
+-- show streams
+show streams;
+
+-- show topics
+show topics;
+
+-- print out the content of a topic
+print 'toll-raw-stream-topic';
+
+--  create a stream on top of our enriched-stream topic
+create stream toll_payment (
+  id varchar, 
+  vehicle_type struct<code varchar, desc varchar, fee double>, 
+  total_fee double, 
+  toll struct<code string, location array<double>, city varchar, state varchar>, 
+  ts bigint,  
+  payment_type varchar, 
+  card_no varchar)
+WITH (value_format='JSON', KAFKA_TOPIC = 'toll-enriched-stream-topic');
+
+-- a query that does the counting we tried to do in the previous section with kafka streams
+select windowstart() as period_start, 
+      vehicle_type->code as vehicle_class_code, toll->code as toll_code, toll->city as toll_city, toll->state as toll_state, count(1) as count 
+from TOLL_PAYMENT 
+      WINDOW TUMBLING (SIZE 1 MINUTE) 
+group by vehicle_type->code, toll->code, toll->city, toll->state;
+
+
+-- create a table from the query above
+create table traffic_analysis 
+WITH (value_format='JSON', KAFKA_TOPIC = 'traffic_analysis-topic')
+AS select windowstart() as period_start, 
+      vehicle_type->code as vehicle_class_code, toll->code as toll_code, toll->city as toll_city, toll->state as toll_state, count(1) as count 
+from TOLL_PAYMENT 
+      WINDOW TUMBLING (SIZE 1 MINUTE) 
+group by vehicle_type->code, toll->code, toll->city, toll->state;
+
+
+-- read from our table now
+select period_start, vehicle_class_code, toll_code, toll_city, toll_state, count from TRAFFIC_ANALYSIS;
+
+-- read using the rest api.
+curl -X "POST" "http://localhost:8088/query" \
+     -H "Content-Type: application/vnd.ksql.v1+ ; charset=utf-8" \
+     -d $'{
+  "ksql": "select period_start, vehicle_class_code, toll_code, toll_city, toll_state, count from TRAFFIC_ANALYSIS;",
+  "streamsProperties": {
+    "ksql.streams.auto.offset.reset": "earliest"
+  }
+}'

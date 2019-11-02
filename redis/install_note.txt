@@ -1,0 +1,18 @@
+#download redis 
+wget http://download.redis.io/releases/redis-5.0.5.tar.gz .
+#extract the archive file
+tar xfzv redis-5.0.5.tar.gz
+#change directory into the redis folder
+cd redis-5.0.5
+#build the redis binary using make
+make
+#go up one step
+cd ..
+#copy your folder into the desired location
+sudo mv redis-5.0.5/ /opt/
+#optionally put the src folder in path
+# add /opt/redis-5.0.5/src to $PATH variable
+# you can try benchmarking to see what results redis could achieve on your machine
+try redis-benchmark
+
+

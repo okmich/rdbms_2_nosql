@@ -1,0 +1,26 @@
+# hbase movielens commands
+help
+ 
+# create namespace mvl
+create_namespace 'mvl'
+
+# show all namespaces
+list_namespace
+
+# create table for movie mvl:movies in the mvl namespace
+create 'mvl:movie', 'a'
+
+# lets create our movielens tables in the default namespace
+create 'movie', 'a'
+
+# create table for movie genre movie_genre
+create 'altmovie', 'gm'
+
+# create table for user 
+create 'user', 'u'
+
+# create table for rating 
+create 'rating', 'a'
+
+# create table for denomalized rating 
+create 'denom_rating', 'r'

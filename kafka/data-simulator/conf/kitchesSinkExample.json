@@ -1,0 +1,80 @@
+{
+    "strings": {
+        "firstName": "firstName()",
+        "lastName": "lastName()",
+        "random": "random('one', \"two\", 'three')",
+        "random-int": "random(1, 5, 10)",
+        "random-long": "random(789789375894375, 345875847589789, 10985478547847578)",
+        "random-double": "random(10.22, 23.43)",
+        "random-types": "random('string', 10.554, true, false)",
+        "alpha": "alpha(5)",
+        "alphaNumeric": "alphaNumeric(10)",
+        "uuid": "uuid()"
+    },
+    "primatives": {
+        "active": "boolean()",
+        "rand-long": "long()",
+        "rand-long-min": "long(895043890865)",
+        "rand-long-range": "long(787658, 8948555)",
+        "rand-int": "integer()",
+        "rand-int-min": "integer(80000)",
+        "rand-int-range": "integer(10, 20)",
+        "rand-double": "double()",
+        "rand-double-min": "double(80000.44)",
+        "rand-double-range": "double(10.5, 20.3)"
+    },
+    "dates": {
+        "rand-date": "date()",
+        "min-date": "date(\"2015/03/01T00:00:00\")",
+        "range-date": "date(\"2015/03/01T00:00:00\",\"2015/03/30T00:00:00\")",
+        "now": "now()",
+        "nowTimestamp": "nowTimestamp()",
+        "5days-ago": "now(-5_d)",
+        "timestamp": "timestamp(\"2015/03/01T00:00:00\",\"2015/03/30T00:00:00\")"
+    },
+    "literals": {
+        "literal-bool": true,
+        "literal-int": 34,
+        "literal-long": 897789789574389,
+        "literal-double": 45.33
+    },
+    "references": {
+        "after-5days-ago": "date(this.dates.5days-ago)",
+        "isItActive": "this.primatives.active"
+    },
+    "counters": {
+        "counter1": "counter('one')",
+        "counter2": "counter('two')",
+        "counter2-inc": "counter('two')"
+    },
+    "array": [
+        {
+            "thing": "alpha(3)"
+        },
+        {
+            "thing2": "alpha(3)"
+        },
+        {
+            "thing3": true
+        },
+        {
+            "thing4": "job"
+        }
+    ],
+    "repeat-array": [
+        "repeat(3)",
+        {
+            "thing1": "random('red','blue')",
+            "thing2": "random('red', 'blue')"
+        }
+    ],
+    "random-array": [
+        "random()",
+        {
+            "thing1": "random('red', 'blue')"
+        },
+        {
+            "thing2": "random('orange','purple')"
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+ECHO "Lets create some string data"
+SET foos 230
+
+ECHO "Start a transaction, enter numerous command and after call EXEC to effect all were effected"
+MULTI
+INCRBY foos 11
+DECRBY foos 6
+EXEC
+
+GET foos
+
+
+ECHO "Start a transaction, enter numerous command and after call DISCARD to effect none of the commands"
+MULTI
+INCRBY foos 11
+DECRBY foos 6
+DISCARD
+
+GET foos
+
+ECHO "checkout out other commands for transactions from the official command referent https://redis.io/commands#transactions"

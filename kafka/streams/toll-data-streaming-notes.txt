@@ -1,0 +1,21 @@
+# ksql-datagen tool
+ksql-datagen format=json quickstart=users topic=topic-datagen-users maxInterval=100
+ksql-datagen format=json quickstart=ratings topic=topic-datagen-ratings maxInterval=1000
+ksql-datagen format=json quickstart=orders topic=topic-datagen-orders maxInterval=1000
+
+
+# lets create a topic we will use in the next lecture
+kafka-topics --create --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1 --topic toll-raw-stream-topic 
+kafka-topics --create --bootstrap-server localhost:9092 --partitions 3 --replication-factor 1 --topic toll-enriched-stream-topic
+kafka-topics --create --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1 --topic traffic-analysis-stream-topic
+
+
+# kafka consumer
+kafka-console-consumer --bootstrap-server localhost:9092 --topic toll-raw-stream-topic --property print.key=true --property key.separator='|' --from-beginning
+
+kafka-console-consumer --bootstrap-server localhost:9092 --topic toll-enriched-stream-topic --property print.key=true --property key.separator='|' --from-beginning
+
+kafka-console-consumer --bootstrap-server localhost:9092 --topic traffic-analysis-stream-topic --property print.key=true --property key.separator='|' --from-beginning
+
+
+java -jar target/toll-streams-1.0-SNAPSHOT.jar toll-enriched-stream-topic traffic-analysis-stream-topic
