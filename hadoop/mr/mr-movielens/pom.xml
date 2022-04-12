@@ -6,7 +6,7 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>
-        <hadoopVersion>2.7.3</hadoopVersion>
+        <hadoopVersion>3.2.3</hadoopVersion>
         <hadoopCoreVersion>1.2.1</hadoopCoreVersion>
     </properties>
 
